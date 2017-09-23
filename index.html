@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clip path video</title>
+        <link href="http://fonts.googleapis.com/css?family=Vollkorn:700italic" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+        <style>
+.clip {
+  height: 100px;
+  background-image: url("flames.gif");
+  background-size: 100px 300px;
+  background-blend-mode: screen;
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
+}
+        </style>
+        <div class="clip">
+        </div>
+        <svg height="0" width="0">
+            <defs>
+                <clippath id="svgPath">
+                    <text x="0" y="100" textlength="300" lengthadjust="spacing" font-family="Vollkorn" font-size="100px" font-weight="600" font-style="italic"> This is it </text>
+                </clippath>
+            </defs>
+        </svg>
+    </body>
+</html>
